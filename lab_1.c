@@ -173,6 +173,14 @@ static gboolean on_key_press(GtkWidget *widget, GdkEventKey *event, gpointer use
             cairo_stroke(cr);
             break;
 
+         case GDK_KEY_i:
+            y3 -= 10;
+            y4 -= 10;
+            cairo_move_to(cr, x3, y3);
+            cairo_line_to(cr, x4, y4);
+            cairo_stroke(cr);
+            break;
+
         case GDK_KEY_q:
             rotate(&x3, &y3, &x4, &y4, -0.1); // Поворот на -0.1 радиан
             gtk_widget_queue_draw(drawing_area);
